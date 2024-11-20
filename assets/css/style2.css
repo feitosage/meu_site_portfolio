@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --z-fixed: 100;
+  --font-family: "Poppins", sans-serif;
+  --font-family-secondary: 'Montserrat', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --color-primary: rgba(135, 206, 235, 1);
+  --color-secondary: rgba(0, 0, 0, 0.651);
+  --color-background: rgba(245, 245, 245, 1); 
+  --color-background-light: rgba(245, 245, 245, 0.952); /* luz da sombra da barra de navegação */
+  --color-shadow: rgba(148, 199, 199, 0.219);
+  --color-background-rodape: rgba(245, 245, 245, 0.952);
+  --color-background-copyright: rgb(48, 46, 46); 
+  --header-height: 90px;
+  --padding-large: 200px;
+  --padding-medium: 150px;
+  --padding-mid-small: 100px;
+  --padding-small: 50px;
+  --gap-large: 100px;
+  --gap-medium: 60px;
+  --gap-small: 40px;
+  --gap-xsmall: 15px;
+  --gap-xxsmall: 25px;
+  --transition-duration: 0.3s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--header-height);
+  background-color: var(--color-background-light);
+  box-shadow: 0px 0px 5px 5px var(--color-shadow);
+  z-index: var(--z-fixed);
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-medium);
+  font-size: 1.1rem;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-regular);
+  list-style-type: none;
+}
+
+.options a {
+  position: relative;
+  color: var(--color-secondary);
+}
+
+.options a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: all var(--transition-duration) ease;
+}
+
+.options a:hover::after {
+  width: 70%;
+}
+
+.options a:hover {
+  color: var(--color-primary);
+}
+
+.conteudo1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: var(--gap-large);
+  padding-top: var(--padding-large);  
+  padding-bottom: 5px;
+  background: linear-gradient(to right, #0f0f0e, #adcde0); /* Gradiente de cores */
+  -webkit-background-clip: text; /* Necessário para o gradiente funcionar no texto */
+  background-clip: text; /* Funciona em navegadores modernos */
+  color: transparent; /* Torna a cor de fundo visível na fonte */
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-xsmall);
+  justify-content: center;
+}
+
+.icons img {
+  width: 25px;
+}
+
+.texto1 p {
+  font-size: 1.7rem;
+  color: var(--color-secondary);
+}
+
+.texto1 h1 {
+  font-size: 3.7rem;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.img-01 {
+  width: 600px;
+}
+
+.conteudo2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: var(--gap-large);
+  justify-content: center;
+  padding-top: var(--padding-mid-small);
+  padding-bottom: var(--padding-mid-small);
+}
+
+.img-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto2 {
+  width: 400px;
+}
+
+.texto2 h2 {
+  font-size: 2.5rem;
+}
+
+.texto2 p {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+}
+
+.img2 {
+  width: 350px;
+}
+
+.conteudo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  gap: var(--gap-small);
+  flex-wrap: wrap; 
+}
+
+.swiper {
+  width: 1000px;
+  height: 600px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_projeto{
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 8px;
+}
+
+.btn_projeto:hover{
+  background-color: var(--color-background);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.div_img{
+  width: 50%;
+  padding-left: 40px;
+}
+
+.img_projeto{
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 5px rgba(63, 63, 63, 0.212);
+}
+
+.conteudo_projetos{
+  width: 50%;
+  padding-right: 20px;
+  padding-left: 70px;
+  text-align: start;
+}
+
+.conteudo_projetos p{
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+}
+
+.conteudo_projetos h3{
+  font-size: 1.5rem;
+}
+
+.conteudo3 h2 {
+  font-size: 2.5rem;
+}
+
+.git {
+  font-size: 1.1rem;
+}
+
+.conteudo4 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+  align-items: center;
+  padding-top: var(--padding-small);
+  padding-bottom: var(--padding-medium);
+}
+
+.tecnologia img{
+  height: 150px;
+  opacity: 75%;
+}
+
+.conteudo4 h2 {
+  font-size: 2.5rem;
+}
+
+.tecnologias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre as divs */
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-large);
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: end;
+}
+
+.low{
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: end;
+}
+
+.tecnologias img {
+  width: 130px;
+}
+
+.tecnologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+progress {
+  width: 130px; /* Ou um tamanho específico, se necessário */
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.rodape{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
+  align-items: center;
+  background-color: var(--color-background-rodape);
+  padding: 70px;
+  box-shadow: 0 -4px 8px rgba(148, 199, 199, 0.219);  
+}
+
+.rodape h3{
+  font-size: 1.5rem;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.icons-foot{
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-xsmall);
+  justify-content: center;
+}
+
+.icons-foot img {
+  width: 25px;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-copyright);
+  align-items: center;
+  padding: 5px;
+  color: var(--color-background);
+}
+
+@media (max-width: 850px) {
+  .projetos {
+    flex-direction: column;
+  }
+
+  .img-01 {
+    display: none;
+  }
+
+  .conteudo1 {
+    height: 300px;
+    width: 100%;
+  }
+
+  .img2 {
+    display: none;
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .texto2 {
+    width: 100%;    
+  }
+
+  .tecnologias {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .menu {
+    display: none;
+  }
+
+  .cabecalho {
+    justify-content: start;
+    padding-left: 10%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Cor do indicador da barra de rolagem (a "bolinha") */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+  height: 200px;
+}
+
+/* Cor de fundo quando passa o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

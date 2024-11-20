@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+  --z-fixed: 100;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 90px;
+  background-color: rgba(245, 245, 245, 0.952);
+  box-shadow: 0px 0px 5px 5px rgba(105, 105, 105, 0.219);
+}
+
+body {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.logo a {
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.795);
+  font-weight: 600;
+  height: 20px
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+.options a {
+  position: relative;
+  color: rgba(0, 0, 0, 0.651);
+}
+
+.options a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(135, 206, 235, 1);
+  transition: all 0.3s ease;
+}
+
+.options a:hover::after {
+  width: 70%;
+}
+
+.options a:hover{
+  color: rgba(135, 206, 235, 1);
+}
+
+.conteudo1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 50px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+ 
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+
+.icons img {
+  width: 25px;
+}
+
+.texto1 p {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.651);
+}
+
+.texto1 h1 {
+  font-size: 3.7rem;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.img-01 {
+  width: 600px;
+}
+
+.conteudo2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+}
+
+.img-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto2 {
+  width: 400px;
+}
+
+.texto2 h2 {
+  font-size: 2.5rem;
+}
+
+.texto2 p {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.651);  
+  ;
+}
+
+.img2 {
+  width: 350px;
+}
+
+.conteudo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.swiper{
+  width: 800px;
+  height: 500px;
+}
+
+.swiper-slide{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo3 h2 {
+  font-size: 2.5rem;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.git {
+  font-size: 1.1rem;
+}
+
+.projeto1 {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  height: 180px;
+  width: 280px;
+  border-radius: 15px;
+  background-color: #8e8e8e;
+  border: none;
+  transition: transform 0.5s ease-in;
+}
+
+.projeto1:hover {
+  background-color: #00000044;
+  cursor: pointer;
+}
+
+.projeto1 p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #d8d8d8;
+}
+
+.conteudo4 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.conteudo4 h2 {
+  font-size: 2.5rem;
+}
+
+.tecnologias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.tecnologias img {
+  width: 130px;
+}
+
+.tecnologia {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tecnologia1 {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.mobile-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .img-01 {
+    display: none;
+  }
+
+  .conteudo1 {
+    height: 300px;
+    width: 100%;
+  }
+
+  .img2 {
+    display: none;
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .texto2 {
+    width: 100%;
+  }
+
+  .tecnologias {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .menu {
+    display: none;
+  }
+
+  .cabecalho {
+    justify-content: start;
+    padding-left: 10%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Cor do indicador da barra de rolagem (a "bolinha") */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+  height: 200px;
+}
+
+/* Cor de fundo quando passa o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
