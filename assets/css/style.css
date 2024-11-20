@@ -4,7 +4,6 @@
   --z-fixed: 100;
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +11,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -28,16 +27,14 @@ body {
 .cabecalho {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between; /* Alinha logo e menu em uma linha */
   align-items: center;
-  
 }
 
 .logo a {
   font-size: 1.6rem;
   color: rgba(0, 0, 0, 0.795);
   font-weight: 600;
-  height: 20px
 }
 
 .options {
@@ -70,7 +67,7 @@ body {
   width: 70%;
 }
 
-.options a:hover{
+.options a:hover {
   color: rgba(135, 206, 235, 1);
 }
 
@@ -83,7 +80,6 @@ body {
   gap: 50px;
   padding-top: 250px;
   padding-bottom: 250px;
- 
 }
 
 .icons {
@@ -134,8 +130,7 @@ body {
 
 .texto2 p {
   font-size: 1.1rem;
-  color: rgba(0, 0, 0, 0.651);  
-  ;
+  color: rgba(0, 0, 0, 0.651);
 }
 
 .img2 {
@@ -152,12 +147,12 @@ body {
   flex-wrap: wrap;
 }
 
-.swiper{
+.swiper {
   width: 800px;
   height: 500px;
 }
 
-.swiper-slide{
+.swiper-slide {
   text-align: center;
   display: flex;
   align-items: center;
@@ -249,18 +244,18 @@ body {
 
 @media (max-width: 850px) {
   .projetos {
-    display: flex;
     flex-direction: column;
     gap: 25px;
   }
 
   .img-01 {
-    display: none;
+    display: none; /* Esconde a imagem em telas menores */
   }
 
   .conteudo1 {
-    height: 300px;
-    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 
   .img2 {
@@ -274,22 +269,110 @@ body {
   }
 
   .texto2 {
-    width: 100%;
+    width: 100%; /* Aumenta a largura do texto para ocupar toda a tela */
   }
 
   .tecnologias {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .conteudo1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
 @media (max-width: 550px) {
   .menu {
-    display: none;
+    display: none; /* Esconde o menu em telas muito pequenas */
   }
 
   .cabecalho {
     justify-content: start;
     padding-left: 10%;
+  }
+
+  .logo a {
+    font-size: 1.4rem; /* Reduz o tamanho da logo em dispositivos pequenos */
+  }
+
+  .options {
+    display: none; /* Esconde as opções de menu em dispositivos muito pequenos */
+  }
+
+  .mobile-icon {
+    display: block; /* Exibe o ícone de menu para dispositivos pequenos */
+  }
+
+  .mobile-menu {
+    display: block; /* Exibe o menu no formato mobile */
+  }
+
+  .conteudo1 {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 30px;
+  }
+
+  .texto1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .texto1 p {
+    font-size: 1.3rem;
+  }
+
+  .img-01 {
+    width: 100%; /* Adapta a imagem para a tela */
+  }
+
+  .conteudo2 {
+    gap: 30px;
+  }
+
+  .img2 {
+    width: 100%; /* Adapta a imagem para a tela */
+  }
+
+  .conteudo4 h2 {
+    font-size: 2rem; /* Ajusta o tamanho da fonte do título */
+  }
+
+  .tecnologias {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tecnologia img {
+    width: 100px; /* Ajusta o tamanho das imagens das tecnologias */
+  }
+}
+
+@media (max-width: 400px) {
+  .conteudo3 h2 {
+    font-size: 2rem; /* Ajusta o tamanho da fonte do título */
+  }
+
+  .projeto1 {
+    width: 100%; /* Faz os projetos se ajustarem para a tela */
+  }
+
+  .swiper {
+    width: 100%; /* Ajusta o swiper para se ajustar à tela */
+    height: 350px; /* Ajusta a altura do swiper */
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(245, 245, 245, 0.95);
+    box-shadow: 0px 0px 5px rgba(105, 105, 105, 0.219);
+    width: 100%;
+    display: block;
+    padding: 10px;
   }
 }
 
@@ -297,19 +380,16 @@ body {
   width: 10px;
 }
 
-/* Cor de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Cor do indicador da barra de rolagem (a "bolinha") */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 30px;
   height: 200px;
 }
 
-/* Cor de fundo quando passa o mouse sobre a barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }

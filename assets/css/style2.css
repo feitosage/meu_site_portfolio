@@ -10,7 +10,7 @@
   --color-primary: rgba(135, 206, 235, 1);
   --color-secondary: rgba(0, 0, 0, 0.651);
   --color-background: rgba(245, 245, 245, 1); 
-  --color-background-light: rgba(245, 245, 245, 0.952); /* luz da sombra da barra de navegação */
+  --color-background-light: rgba(245, 245, 245, 0.952);
   --color-shadow: rgba(148, 199, 199, 0.219);
   --color-background-rodape: rgba(245, 245, 245, 0.952);
   --color-background-copyright: rgb(48, 46, 46); 
@@ -53,6 +53,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: var(--gap-medium);
 }
 
 .logo a {
@@ -100,14 +101,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: none;
   gap: var(--gap-large);
   padding-top: var(--padding-large);  
   padding-bottom: 5px;
-  background: linear-gradient(to right, #0f0f0e, #adcde0); /* Gradiente de cores */
-  -webkit-background-clip: text; /* Necessário para o gradiente funcionar no texto */
-  background-clip: text; /* Funciona em navegadores modernos */
-  color: transparent; /* Torna a cor de fundo visível na fonte */
+  background: linear-gradient(to right, #0f0f0e, #adcde0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .icons {
@@ -174,7 +174,7 @@ body {
   justify-content: center;
   margin-top: 80px;
   gap: var(--gap-small);
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .swiper {
@@ -189,7 +189,7 @@ body {
   justify-content: center;
 }
 
-.btn_projeto{
+.btn_projeto {
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: var(--color-primary);
@@ -197,37 +197,37 @@ body {
   border-radius: 8px;
 }
 
-.btn_projeto:hover{
+.btn_projeto:hover {
   background-color: var(--color-background);
   border: 1px solid var(--color-primary);
   cursor: pointer;
   color: var(--color-primary);
 }
 
-.div_img{
+.div_img {
   width: 50%;
   padding-left: 40px;
 }
 
-.img_projeto{
+.img_projeto {
   width: 500px;
   border-radius: 10px;
   box-shadow: 0 0 15px 5px rgba(63, 63, 63, 0.212);
 }
 
-.conteudo_projetos{
+.conteudo_projetos {
   width: 50%;
   padding-right: 20px;
   padding-left: 70px;
   text-align: start;
 }
 
-.conteudo_projetos p{
+.conteudo_projetos p {
   color: var(--color-secondary);
   font-size: 1.1rem;
 }
 
-.conteudo_projetos h3{
+.conteudo_projetos h3 {
   font-size: 1.5rem;
 }
 
@@ -248,7 +248,7 @@ body {
   padding-bottom: var(--padding-medium);
 }
 
-.tecnologia img{
+.tecnologia img {
   height: 150px;
   opacity: 75%;
 }
@@ -260,20 +260,20 @@ body {
 .tecnologias {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaçamento entre as divs */
+  gap: 10px;
   align-items: center;
   justify-content: center;
   gap: var(--gap-large);
 }
 
-.top{
+.top {
   display: flex;
   flex-direction: row;
   gap: 80px;
   align-items: end;
 }
 
-.low{
+.low {
   display: flex;
   flex-direction: row;
   gap: 80px;
@@ -291,14 +291,14 @@ body {
   gap: 10px;
 }
 
-.progress{
+.progress {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 progress {
-  width: 130px; /* Ou um tamanho específico, se necessário */
+  width: 130px;
   height: 10px;
   -webkit-appearance: none;
   appearance: none;
@@ -314,7 +314,7 @@ progress::-webkit-progress-value {
   border-radius: 10px;
 }
 
-.rodape{
+.rodape {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -322,21 +322,21 @@ progress::-webkit-progress-value {
   align-items: center;
   background-color: var(--color-background-rodape);
   padding: 70px;
-  box-shadow: 0 -4px 8px rgba(148, 199, 199, 0.219);  
+  box-shadow: 0 -4px 8px rgba(148, 199, 199, 0.219);
 }
 
-.rodape h3{
+.rodape h3 {
   font-size: 1.5rem;
 }
 
-.infos{
+.infos {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
 
-.icons-foot{
+.icons-foot {
   display: flex;
   flex-direction: row;
   gap: var(--gap-xsmall);
@@ -347,7 +347,7 @@ progress::-webkit-progress-value {
   width: 25px;
 }
 
-.copyright{
+.copyright {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background-copyright);
@@ -357,17 +357,24 @@ progress::-webkit-progress-value {
 }
 
 @media (max-width: 850px) {
+  .cabecalho {
+    flex-direction: column; /* Muda para coluna */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .projetos {
     flex-direction: column;
   }
 
-  .img-01 {
-    display: none;
+  .conteudo1 {
+    height: auto;
+    width: 100%;
+    padding: 20px;
   }
 
-  .conteudo1 {
-    height: 300px;
-    width: 100%;
+  .img-01 {
+    display: none;
   }
 
   .img2 {
@@ -386,6 +393,12 @@ progress::-webkit-progress-value {
 
   .tecnologias {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -398,25 +411,37 @@ progress::-webkit-progress-value {
     justify-content: start;
     padding-left: 10%;
   }
+
+  .btn_projeto {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .rodape {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .tecnologias img {
+    width: 100px;
+  }
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Cor de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Cor do indicador da barra de rolagem (a "bolinha") */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 30px;
   height: 200px;
 }
 
-/* Cor de fundo quando passa o mouse sobre a barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
