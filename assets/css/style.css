@@ -393,3 +393,139 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* menu mobile */
+
+/* Novo estilo para o menu suspenso */
+.mobile-menu {
+  display: none;
+  background-color: rgba(245, 245, 245, 0.95);
+  box-shadow: 0px 0px 5px rgba(105, 105, 105, 0.219);
+  position: absolute;
+  top: 90px; /* Ajusta a posição do menu abaixo do cabeçalho */
+  right: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.mobile-menu.show {
+  display: block; /* Exibe o menu quando a classe 'show' é adicionada */
+}
+
+.options {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.options a {
+  color: rgba(0, 0, 0, 0.651);
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.mobile-icon {
+  display: block; /* Exibe o ícone do menu em telas pequenas */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .mobile-menu {
+    padding: 20px;
+  }
+
+  .conteudo1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .swiper {
+    width: 100%; /* Ajusta o carrossel para a largura da tela */
+    height: 400px; /* Ajusta a altura do carrossel */
+  }
+
+  .img-01 {
+    width: 100%; /* Ajusta a largura da imagem */
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .img2 {
+    width: 100%; /* Ajusta a largura da imagem */
+  }
+
+  .tecnologias {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tecnologia img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 550px) {
+  .mobile-icon {
+    font-size: 2.5rem; /* Aumenta o tamanho do ícone */
+  }
+
+  .conteudo1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 30px;
+  }
+
+  .texto1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .texto1 p {
+    font-size: 1.3rem;
+  }
+
+  .img-01 {
+    width: 100%;
+  }
+
+  .conteudo2 {
+    gap: 30px;
+  }
+
+  .img2 {
+    width: 100%;
+  }
+
+  .conteudo4 h2 {
+    font-size: 2rem;
+  }
+
+  .tecnologias {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tecnologia img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projeto1 {
+    width: 100%; /* Faz os projetos se ajustarem para a tela */
+  }
+
+  .swiper {
+    width: 100%;
+    height: 350px;
+  }
+
+  .mobile-menu {
+    top: 60px;
+    padding: 10px;
+  }
+}
