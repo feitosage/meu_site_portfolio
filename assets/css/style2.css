@@ -140,10 +140,10 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: var(--gap-large);
+  gap: 35px; /* posição da logo  do Sobre Mim*/
   justify-content: center;
   padding-top: var(--padding-mid-small);
-  padding-bottom: var(--padding-mid-small);
+  padding-bottom: var(--padding-mid-small);    
 }
 
 .img-icons {
