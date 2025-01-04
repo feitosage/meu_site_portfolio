@@ -108,6 +108,8 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .icons {
@@ -165,7 +167,7 @@ body {
 }
 
 .img2 {
-  width: 100%; /* Tornando as imagens responsivas */
+  width: 100%;
   max-width: 350px; /* Define um limite máximo para o tamanho da imagem */
 }
 
@@ -208,7 +210,6 @@ body {
 
 .div_img {
   width: 50%;
-  padding-left: 40px;
 }
 
 .img_projeto {
@@ -221,7 +222,6 @@ body {
 .conteudo_projetos {
   width: 50%;
   padding-right: 20px;
-  padding-left: 70px;
   text-align: start;
 }
 
@@ -249,6 +249,12 @@ body {
   align-items: center;
   padding-top: var(--padding-small);
   padding-bottom: var(--padding-medium);
+}
+
+.imgs_hab{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .tecnologia img {
@@ -361,25 +367,35 @@ progress::-webkit-progress-value {
 }
 
 /* Responsividade */
+
+/*.imgs_hab{
+  display: grid;
+}*/
+
+@media (max-width: 1279px){
+  .imgs_hab{
+    display: grid;
+  }
+}
+
 @media (max-width: 850px) {
   .cabecalho {
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .projetos {
-    flex-direction: column;
+    display: none;
   }
 
   .conteudo1 {
     height: auto;
-    width: 100%;
     padding: 20px;
+    margin-top: 20px;
+    flex-direction: column;
   }
 
-  .img-01, .img2 {
-    display: none;
+  .texto1{
+    text-align: center;
+  }
+
+  .img-01 {
+    max-width: 300px;
   }
 
   .conteudo2 {
@@ -388,8 +404,18 @@ progress::-webkit-progress-value {
     padding-right: 20px;
   }
 
+  .img2 {
+    max-width: 250px;
+  }
+
   .texto2 {
     width: 100%;
+    text-align: center;
+  }
+
+  .titulo_cnt3{
+    text-align: center;
+    padding-bottom: 20px;
   }
 
   .tecnologias {
@@ -401,16 +427,35 @@ progress::-webkit-progress-value {
     width: 100%;
     height: auto;
   }
+
+  .img-02{
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+  .conteudo_projetos {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .conteudo4 h2 {
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 550px) {
   .menu {
     display: none;
-  }
-
-  .cabecalho {
-    justify-content: start;
-    padding-left: 10%;
   }
 
   .btn_projeto {
