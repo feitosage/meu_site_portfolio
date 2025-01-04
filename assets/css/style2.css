@@ -142,7 +142,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 35px; /* posição da logo  do Sobre Mim*/
+  gap: 150px; /* posição da logo  do Sobre Mim*/
   justify-content: center;
   padding-top: var(--padding-mid-small);
   padding-bottom: var(--padding-mid-small);    
