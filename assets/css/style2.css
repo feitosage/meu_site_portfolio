@@ -181,6 +181,16 @@ body {
   flex-wrap: wrap;
 }
 
+.conteudo5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  gap: var(--gap-small);
+  flex-wrap: wrap;
+}
+
 .swiper {
   width: 100%;
   height: auto; /* Ajusta a altura automaticamente */
@@ -219,6 +229,7 @@ body {
   box-shadow: 0 0 15px 5px rgba(63, 63, 63, 0.212);
 }
 
+
 .conteudo_projetos {
   width: 50%;
   padding-right: 20px;
@@ -248,7 +259,7 @@ body {
   gap: var(--gap-medium);
   align-items: center;
   padding-top: var(--padding-small);
-  padding-bottom: var(--padding-medium);
+  padding-bottom: 65px;
 }
 
 .imgs_hab{
@@ -274,6 +285,14 @@ body {
   align-items: center;
   justify-content: center;
   gap: var(--gap-large);
+}
+
+.img_marca {
+  width: 100%; /* Imagem ajustada para tela */
+  max-width: 70px;
+  border-radius: 10px;
+  justify-content: right;  
+  /*box-shadow: 0 0 15px 5px rgba(63, 63, 63, 0.212);*/
 }
 
 .top {
