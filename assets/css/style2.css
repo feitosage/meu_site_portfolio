@@ -290,8 +290,7 @@ body {
 .img_marca {
   width: 100%; /* Imagem ajustada para tela */
   max-width: 70px;
-  border-radius: 10px;
-  justify-content: right;  
+  border-radius: 10px;  
   /*box-shadow: 0 0 15px 5px rgba(63, 63, 63, 0.212);*/
 }
 
